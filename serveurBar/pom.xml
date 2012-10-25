@@ -16,6 +16,60 @@
       <version>4.10</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>1.0.2</version>
+            <scope>provided</scope>
+        </dependency>
+     <dependency>
+            <groupId>javax.transaction</groupId>
+            <artifactId>jta</artifactId>
+            <version>1.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>10.8.1.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Dépendances application -->
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>1.14</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-json</artifactId>
+            <version>1.14</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-servlet</artifactId>
+            <version>1.14</version>
+        </dependency>
+
+        <!-- Dépendences de test -->
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>1.14</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <scope>test</scope>
+        </dependency>
   </dependencies>
 
   <properties>
@@ -45,6 +99,13 @@
             <configuration>
               <properties>
                 <cargo.servlet.port>${servlet.port}</cargo.servlet.port>
+                <cargo.datasource.datasource.derby>
+                                    cargo.datasource.driver=org.apache.derby.jdbc.EmbeddedDriver|
+                                    cargo.datasource.url=jdbc:derby:derbyDB;create=true|
+                                    cargo.datasource.jndi=jdbc/DSfmin362|
+                                    cargo.datasource.username=APP|
+                                    cargo.datasource.password=APP
+                                </cargo.datasource.datasource.derby>
               </properties>
             </configuration>
             <deployables>
