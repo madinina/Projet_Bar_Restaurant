@@ -16,7 +16,9 @@ public class MenuResource {
 	@Produces( MediaType.APPLICATION_JSON )
 	public List<Produit> menu(){
 		Produit p1=new Produit();
+		p1.setNom("Bière");
 		Produit p2=new Produit();
+		p2.setNom("Coca");
 		List<Produit> liste=new ArrayList<Produit>();
 		liste.add(p1);
 		liste.add(p2);
