@@ -18,12 +18,13 @@ public class CommandesResource {
 	public List<Commande> commandes(){
 		return null;
 		//TODO	
-		
-	}
+	/*
 	
 	@POST
 	public Response newcommande(){
 		
-	}
+		
+	}*/
 
+}
 }
