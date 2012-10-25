@@ -18,16 +18,16 @@ public class Produit
 
     @Id
     @GeneratedValue( strategy = GenerationType.SEQUENCE )
-    private Long CodeProd;
+    private Long codeProd;
     
     @Column
-    private Long Nom;
+    private String nom;
     
     @Column
-    private Long Prix;
+    private Long prix;
     
     @Column
-    private Long Composant  ;
+    private Long contenance  ;
     
 
 
@@ -35,6 +35,54 @@ public class Produit
     {
         // Constructeur par défaut nécessaire pour JPA
     }
+
+
+
+	public Long getCodeProd() {
+		return codeProd;
+	}
+
+
+
+	public void setCodeProd(Long codeProd) {
+		codeProd = codeProd;
+	}
+
+
+
+	public Long getNom() {
+		return getNom();
+	}
+
+
+
+	public void setNom(String nom) {
+		nom = nom;
+	}
+
+
+
+	public Long getPrix() {
+		return prix;
+	}
+
+
+
+	public void setPrix(Long prix) {
+		prix = prix;
+	}
+
+
+
+	public Long getContenance() {
+		return contenance;
+	}
+
+
+
+	public void setContenance(Long contenance) {
+		contenance = contenance;
+	}
 
 
 

@@ -24,11 +24,9 @@ public class Commande
     @ManyToOne
     private Table table; 
    
-    
 
-    
 
-    public Commande()
+	public Commande()
     {
         // Constructeur par défaut nécessaire pour JPA
     }
