@@ -35,7 +35,9 @@ public class Demo {
 		liste.add(p2);
 		liste.add(p3);
 		
+		tmp+="Produit    Catégorie\n\n\n";
 		for(int i=0;i<liste.size();i++){
+			
 			tmp+=liste.get(i).getNom()+"    "+liste.get(i).getCategorie().getNom()+"  \n";
 		}
 		
