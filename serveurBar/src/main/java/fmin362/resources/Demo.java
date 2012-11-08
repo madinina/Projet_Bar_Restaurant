@@ -12,7 +12,7 @@ import fmin362.model.Categorie;
 import fmin362.model.Commande;
 import fmin362.model.Produit;
 
-@Path("/demo")
+@Path("/getMenu")
 public class Demo {
 	@GET
 	@Produces( MediaType.APPLICATION_JSON )
@@ -23,13 +23,13 @@ public class Demo {
 		Produit p2=new Produit();
 		Produit p3=new Produit();
 		
-		p1.setNom("Bière");
+		p1.setNom("Biere");
 		p2.setNom("Coca");
 		p3.setNom("Lasagne");
 		
-		p1.setCategorie(new Categorie("Boisson_alcoolisee"));
-		p2.setCategorie(new Categorie("Boisson_non_alcoolisee"));
-		p3.setCategorie(new Categorie("Plat_chaud"));
+		p1.setCategorie(new Categorie("Boisson alcoolisee"));
+		p2.setCategorie(new Categorie("Boisson non alcoolisee"));
+		p3.setCategorie(new Categorie("Plat chaud"));
 		
 		liste.add(p1);
 		liste.add(p2);
