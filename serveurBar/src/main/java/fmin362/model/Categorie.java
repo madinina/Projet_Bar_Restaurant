@@ -15,6 +15,7 @@ import javax.persistence.OneToMany;
 public class Categorie {
 	
 	@Id
+	@GeneratedValue( strategy = GenerationType.SEQUENCE )
 	private Long numCat;
 	
 	@Column
