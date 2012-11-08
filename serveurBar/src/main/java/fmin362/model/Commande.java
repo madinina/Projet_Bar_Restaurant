@@ -17,7 +17,7 @@ public class Commande
 
     @Id
     @GeneratedValue( strategy = GenerationType.SEQUENCE )
-    private Long numCom;
+    private Long id;
 
 
  
@@ -33,9 +33,33 @@ public class Commande
 
 
 
+	public Long getId() {
+		return id;
+	}
+
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+
+	public Table getTable() {
+		return table;
+	}
+
+
+
+	public void setTable(Table table) {
+		this.table = table;
+	}
+
+
+
 	public Commande(Long numCom, Table table) {
 		super();
-		this.numCom = numCom;
+		this.id = numCom;
 		this.table = table;
 	}
 

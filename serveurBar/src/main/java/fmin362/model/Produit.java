@@ -13,7 +13,7 @@ public class Produit
 
     @Id
     @GeneratedValue( strategy = GenerationType.SEQUENCE )
-    private Long codeProd;
+    private Long id;
     
     @Column
     private String nom;
@@ -37,7 +37,7 @@ public class Produit
 	public Produit(Long codeProd, String nom, Long prix, Long contenance,
 			Categorie categorie) {
 		super();
-		this.codeProd = codeProd;
+		this.id = codeProd;
 		this.nom = nom;
 		this.prix = prix;
 		this.contenance = contenance;
@@ -58,14 +58,14 @@ public class Produit
 
 
 
-	public Long getCodeProd() {
-		return codeProd;
+	public Long getId() {
+		return id;
 	}
 
 
 
-	public void setCodeProd(Long codeProd) {
-		this.codeProd = codeProd;
+	public void setId(Long codeProd) {
+		this.id = codeProd;
 	}
 
 

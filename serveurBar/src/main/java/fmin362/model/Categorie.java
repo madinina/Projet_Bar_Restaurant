@@ -15,7 +15,8 @@ import javax.persistence.OneToMany;
 public class Categorie {
 	
 	@Id
-	private Long numCat;
+	@GeneratedValue( strategy = GenerationType.SEQUENCE )
+	private Long id;
 	
 	@Column
     private String nom;
@@ -25,11 +26,11 @@ public class Categorie {
 	@OneToMany(mappedBy="categorie")
     private List<Produit> produit; 
 	
-	@Override
+	/*@Override
 	public String toString() {
 		return "Categorie [numCat=" + numCat + ", nom=" + nom + ", produit="
 				+ produit + "]";
-	}
+	}*/
 
 	public Categorie()
     {
@@ -41,12 +42,12 @@ public class Categorie {
 		this.nom = nom;
 	}
 	
-	public Long getNumCat() {
-		return numCat;
+	public Long getId() {
+		return id;
 	}
 
-	public void setNumCat(Long numCat) {
-		this.numCat = numCat;
+	public void setId(Long numCat) {
+		this.id = numCat;
 	}
 
 	public String getNom() {
