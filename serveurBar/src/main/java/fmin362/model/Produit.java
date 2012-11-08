@@ -2,11 +2,6 @@ package fmin362.model;
 
 import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.*;
 
 @Entity
@@ -36,6 +31,18 @@ public class Produit
     {
         // Constructeur par défaut nécessaire pour JPA
     }
+
+
+
+	public Produit(Long codeProd, String nom, Long prix, Long contenance,
+			Categorie categorie) {
+		super();
+		this.codeProd = codeProd;
+		this.nom = nom;
+		this.prix = prix;
+		this.contenance = contenance;
+		this.categorie = categorie;
+	}
 
 
 

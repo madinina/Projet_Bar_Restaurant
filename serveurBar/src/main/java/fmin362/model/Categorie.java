@@ -20,6 +20,8 @@ public class Categorie {
 	@Column
     private String nom;
 	
+	
+
 	@OneToMany(mappedBy="categorie")
     private List<Produit> produit; 
 	
@@ -33,7 +35,12 @@ public class Categorie {
     {
         // Constructeur par défaut nécessaire pour JPA
     }
-
+	
+	public Categorie(String nom) {
+		super();
+		this.nom = nom;
+	}
+	
 	public Long getNumCat() {
 		return numCat;
 	}

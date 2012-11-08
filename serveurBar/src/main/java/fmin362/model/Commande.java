@@ -33,5 +33,13 @@ public class Commande
 
 
 
+	public Commande(Long numCom, Table table) {
+		super();
+		this.numCom = numCom;
+		this.table = table;
+	}
+
+
+
     
 }
