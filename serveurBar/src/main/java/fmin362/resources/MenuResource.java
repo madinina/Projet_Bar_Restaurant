@@ -8,6 +8,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import fmin362.model.Categorie;
 import fmin362.model.Produit;
 
 @Path( "/menu" )
@@ -25,8 +26,8 @@ public class MenuResource {
 		p2.setNom("Coca");
 		p3.setNom("Lasagne");
 		
-		p1.setCategorie(new Categorie("Boisson alcolisée"));
-		p2.setCategorie(new Categorie("Boisson  non alcolisée"));
+		p1.setCategorie(new Categorie("Boisson alcoolisée"));
+		p2.setCategorie(new Categorie("Boisson non alcoolisée"));
 		p3.setCategorie(new Categorie("Plat chaud"));
 		
 		liste.add(p1);
