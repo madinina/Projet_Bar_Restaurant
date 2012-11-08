@@ -3,23 +3,21 @@ package fmin362.resources;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.naming.InitialContext;
-import javax.persistence.EntityManager;
-import javax.transaction.UserTransaction;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import fmin362.model.Categorie;
+import fmin362.model.Commande;
 import fmin362.model.Produit;
 
-@Path( "/menu" )
-public class MenuResource {
+@Path("/demo")
+public class Demo {
 	@GET
 	@Produces( MediaType.APPLICATION_JSON )
-	public List<Produit> menu(){
-		
+	public String demo(){
+		String tmp="";
 		List<Produit> liste=new ArrayList<Produit>();
 		Produit p1=new Produit();
 		Produit p2=new Produit();
@@ -36,10 +34,14 @@ public class MenuResource {
 		liste.add(p1);
 		liste.add(p2);
 		liste.add(p3);
-		return liste;
 		
+		for(int i=0;i<liste.size();i++){
+			tmp+=liste.get(i).getNom()+"    "+liste.get(i).getCategorie().getNom()+"  \n";
+		}
 		
+		return tmp;
 		
-	}
+
+}
 
 }
