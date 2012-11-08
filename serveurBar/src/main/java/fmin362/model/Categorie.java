@@ -22,16 +22,6 @@ public class Categorie {
     private String nom;
 	
 	
-
-	@OneToMany(mappedBy="categorie")
-    private List<Produit> produits; 
-	
-	/*@Override
-	public String toString() {
-		return "Categorie [numCat=" + numCat + ", nom=" + nom + ", produit="
-				+ produit + "]";
-	}*/
-
 	public Categorie()
     {
         // Constructeur par défaut nécessaire pour JPA
@@ -58,13 +48,7 @@ public class Categorie {
 		this.nom = nom;
 	}
 
-	public List<Produit> getProduits() {
-		return produits;
-	}
 
-	public void setProduits(List<Produit> produits) {
-		this.produits = produits;
-	}
 	
 	
 }
