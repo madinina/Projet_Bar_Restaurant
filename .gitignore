@@ -2,3 +2,5 @@
 *.swp
 serveurBar/target
 *.*~
+.classpath
+.settings
