@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
+import javax.persistence.*;
 
 @Entity
 public class Produit
@@ -29,7 +29,8 @@ public class Produit
     @Column
     private Long contenance  ;
     
-
+    @ManyToOne
+    private Categorie categorie;
 
     public Produit()
     {
