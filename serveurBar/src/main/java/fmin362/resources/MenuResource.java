@@ -26,9 +26,9 @@ public class MenuResource {
 		p2.setNom("Coca");
 		p3.setNom("Lasagne");
 		
-		p1.setCategorie(new Categorie("Boisson alcoolisée"));
-		p2.setCategorie(new Categorie("Boisson non alcoolisée"));
-		p3.setCategorie(new Categorie("Plat chaud"));
+		p1.setCategorie(new Categorie("Boisson_alcoolisee"));
+		p2.setCategorie(new Categorie("Boisson_non_alcoolisee"));
+		p3.setCategorie(new Categorie("Plat_chaud"));
 		
 		liste.add(p1);
 		liste.add(p2);
