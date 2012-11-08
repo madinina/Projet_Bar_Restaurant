@@ -20,7 +20,7 @@ public class Table
 
 	@Id
     @GeneratedValue( strategy = GenerationType.SEQUENCE )
-    private Long numTab;
+    private Long id;
 	
 	@OneToMany
 	private Commande commande;
@@ -33,7 +33,27 @@ public class Table
 
 	public Table(Long numTab) {
 		super();
-		this.numTab = numTab;
+		this.id = numTab;
+	}
+
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	public Commande getCommande() {
+		return commande;
+	}
+
+
+	public void setCommande(Commande commande) {
+		this.commande = commande;
 	}
 
 
