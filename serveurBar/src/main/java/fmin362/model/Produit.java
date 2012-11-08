@@ -45,19 +45,19 @@ public class Produit
 
 
 	public void setCodeProd(Long codeProd) {
-		codeProd = codeProd;
+		this.codeProd = codeProd;
 	}
 
 
 
-	public Long getNom() {
-		return getNom();
+	public String getNom() {
+		return nom;
 	}
 
 
 
 	public void setNom(String nom) {
-		nom = nom;
+		this.nom = nom;
 	}
 
 
@@ -69,7 +69,7 @@ public class Produit
 
 
 	public void setPrix(Long prix) {
-		prix = prix;
+		this.prix = prix;
 	}
 
 
@@ -81,7 +81,7 @@ public class Produit
 
 
 	public void setContenance(Long contenance) {
-		contenance = contenance;
+		this.contenance = contenance;
 	}
 
 

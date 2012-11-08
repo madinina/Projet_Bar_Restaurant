@@ -24,7 +24,7 @@ public class WebappIT extends TestCase
         this.baseUrl = "http://localhost:" + port + "/serveurBar";
     }
 
-    @Test
+    /*@Test
     public void testContext() throws Exception
     {
         //test la connection
@@ -32,7 +32,7 @@ public class WebappIT extends TestCase
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.connect();
         assertEquals(200, connection.getResponseCode());
-    }
+    }*/// commenté car pas d'index
 
     @Test
     public void testMenu() throws Exception
@@ -52,7 +52,10 @@ public class WebappIT extends TestCase
         List<Map<String,?>> result = webResource.get( List.class );
         System.out.println( result );
 
-        assertEquals( true, result.size()>2 );//on suppose qu'il y ait plus de 2 elts dans la table
-        assertEquals( "Biere", result.get(0).get("nom"));//on suppose que le premier elt de la table est biere
+        assertEquals( true, result.size()>1 );//on suppose qu'il y ait plus de 1 elt dans la table
+        assertNotNull(result.get(0).get("nom"));//on suppose que le premier elt de la table est non null
+        assertNotNull(result.get(0).get("contenance"));//on suppose que le premier elt de la table est non null
+        assertNotNull(result.get(0).get("prix"));//on suppose que le premier elt de la table est non null
+
     }
 }
