@@ -24,7 +24,7 @@ public class Categorie {
 	
 
 	@OneToMany(mappedBy="categorie")
-    private List<Produit> produit; 
+    private List<Produit> produits; 
 	
 	/*@Override
 	public String toString() {
@@ -58,12 +58,12 @@ public class Categorie {
 		this.nom = nom;
 	}
 
-	public List<Produit> getProduit() {
-		return produit;
+	public List<Produit> getProduits() {
+		return produits;
 	}
 
-	public void setProduit(List<Produit> produit) {
-		this.produit = produit;
+	public void setProduits(List<Produit> produits) {
+		this.produits = produits;
 	}
 	
 	
