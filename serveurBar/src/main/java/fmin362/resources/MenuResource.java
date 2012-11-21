@@ -1,45 +1,28 @@
 package fmin362.resources;
 
-import java.util.ArrayList;
+import fmin362.model.Category;
+import fmin362.values.Menu;
 import java.util.List;
-
 import javax.naming.InitialContext;
 import javax.persistence.EntityManager;
-import javax.transaction.UserTransaction;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import fmin362.model.Categorie;
-import fmin362.model.Produit;
-
 @Path( "/menu" )
-public class MenuResource {
-	@GET
-	@Produces( MediaType.APPLICATION_JSON )
-	public List<Produit> menu(){
-		
-		List<Produit> liste=new ArrayList<Produit>();
-		Produit p1=new Produit();
-		Produit p2=new Produit();
-		Produit p3=new Produit();
-		
-		p1.setNom("Bière");
-		p2.setNom("Coca");
-		p3.setNom("Lasagne");
-		
-		p1.setCategorie(new Categorie("Boisson_alcoolisee"));
-		p2.setCategorie(new Categorie("Boisson_non_alcoolisee"));
-		p3.setCategorie(new Categorie("Plat_chaud"));
-		
-		liste.add(p1);
-		liste.add(p2);
-		liste.add(p3);
-		return liste;
-		
-		
-		
-	}
+public class MenuResource
+{
+
+    @GET
+    @Produces( MediaType.APPLICATION_JSON )
+    public Menu menu()
+        throws Exception
+    {
+        EntityManager em = (EntityManager) new InitialContext().lookup( "java:comp/env/persistence/EntityManager" );
+        List<Category> categories = em.createQuery( "select c from Category c" ).getResultList();
+        Menu menu = new Menu( categories );
+        return menu;
+    }
 
 }
